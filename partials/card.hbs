@@ -42,16 +42,15 @@ Re-usable card for linking to posts
                 {{^if @first}}sizes="(min-width: 1200px) 1200px, 100vw)"{{else}}sizes="(min-width: 800px) 100vw, 700px"{{/if}}
                 src="{{img_url feature_image size="m"}}"
                 alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                class="gh-card-image w-full object-cover mb-[3.2vmin] aspect-square first-of-type:aspect-video"
+                class="gh-card-image w-full object-cover aspect-square first-of-type:aspect-video rounded-2xl"
                 {{^if @first}}loading="lazy"{{/if}}
               >
             </picture>
         {{/if}}
-        <div class="gh-card-content max-w-[720px] mx-auto text-center">
-            <span class="gh-card-meta block mb-3 text-xs leading-tight tracking-wide uppercase opacity-80"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
-            <h2 class="gh-card-title">{{title}}</h2>
-            <p class="text-md leading-paragraph">{{excerpt}}</p>
-            <strong>Read more</strong>
+        <div class="gh-card-content max-w-[720px] mx-auto flex flex-col gap-2">
+            <h2 class="gh-card-title text-lg leading-[2.8] font-semibold">{{title}}</h2>
+            <p class="text-md leading-normal">{{excerpt}}</p>
+            <span class="gh-card-meta block mb-3 text-xs tracking-wide opacity-80"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM"}}</time></span>
         </div>
     </a>
 </article>

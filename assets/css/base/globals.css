@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    @apply min-h-[100vh] m-0 p-0 font-sans leading-6 bg-white scroll-smooth text-base;
+    @apply min-h-[100vh] m-0 p-0 font-sans leading-6 scroll-smooth text-base;
 }
 
 h1, h2, h3, h4, h5, h6 {
