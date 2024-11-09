@@ -1,7 +1,7 @@
 {
-    "name": "ghost-starter-tw",
-    "description": "A starter theme for Ghost theme development with TailwindCSS",
-    "demo": "https://starter.ghost.io",
+    "name": "golf.sivert.io",
+    "description": "The official theme for golf.sivert.io",
+    "demo": "https://golf.sivert.io",
     "version": "1.0.0",
     "engines": {
         "ghost": ">=5.0.0"
