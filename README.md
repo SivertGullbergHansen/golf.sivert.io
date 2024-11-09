@@ -8,7 +8,7 @@ The WIP theme for my brand **35 Edition**.
 
 ## How to use
 
-1. Clone the project to your `\ghost\content\themes` directory (e.g. `C:\Users\Sivert\Desktop\ghost\content\themes\golf.sivert.io`)
+1. Clone the project to your `/ghost/content/themes` directory (e.g. `/ghost/content/themes/golf.sivert.io`)
 
 OR
 
