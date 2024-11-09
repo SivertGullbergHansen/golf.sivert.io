@@ -6,17 +6,21 @@ The WIP theme for my brand **35 Edition**.
 
 ![Screenshot](.github/preview.png)
 
-## How to use
+## How to install
 
-1. Clone the project to your `/ghost/content/themes` directory (e.g. `/ghost/content/themes/golf.sivert.io`)
+Clone the project to your `/ghost/content/themes` directory (e.g. `/ghost/content/themes\golf.sivert.io`)
 
 OR
 
-1. Download the released .zip file and import it using the Admin panel
+Download the released .zip file and import it using the Admin panel
 
-2. Create a new draft and upload a video to it
+## How to customize
 
-3. Go to Design settings and change the Theme setting "Homepage video source". Insert the current year, month and the original file name. Example: /content/media/2024/11/trailer.mp4
+1. Create a new draft and upload a video to it
+
+2. Go to Design settings and change the Theme setting "Homepage video source". Insert the current year, month and the original file name. Example: /content/media/2024/11/trailer.mp4
+
+3. Save
 
 &nbsp;
 
