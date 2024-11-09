@@ -186,3 +186,8 @@ figcaption strong {
 .gh-readmore svg {
     @apply inline-block align-middle h-[1em] mt-[0.15em];
 }
+
+
+.gh-card-link:hover img {
+    @apply outline-gray-600;
+}

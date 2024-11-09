@@ -1,33 +1,55 @@
 {{!< default}}
-<div class="gh-page px-[4vmin]">
-    <div class="gh-container w-full max-w-[var(--container-width)] mx-auto flex flex-col gap-6">
-
+<div class="gh-page px-[4vmin] pt-12">
+    <div class="gh-container w-full max-w-[var(--container-width)] mx-auto flex flex-col gap-12">
         {{!-- Preview video --}}
         <div class="flex flex-col gap-2" style="align-items: end;">
-            <button class="gh-search-icon flex gap-2 items-center justify-center" style="padding: 8px 16px;" aria-label="search" data-ghost-search>
-    Search
-    <svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M14.949 14.949a1 1 0 0 1 1.414 0l6.344 6.344a1 1 0 0 1-1.414 1.414l-6.344-6.344a1 1 0 0 1 0-1.414Z" fill="currentColor"/><path d="M10 3a7 7 0 1 0 0 14 7 7 0 0 0 0-14Zm-9 7a9 9 0 1 1 18 0 9 9 0 0 1-18 0Z" fill="currentColor"/></svg>
-</button>
+            <button class="gh-search-icon flex gap-2 items-center justify-center" style="padding: 8px 16px;"
+                aria-label="search" data-ghost-search>
+                Search
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
+                    <path
+                        d="M14.949 14.949a1 1 0 0 1 1.414 0l6.344 6.344a1 1 0 0 1-1.414 1.414l-6.344-6.344a1 1 0 0 1 0-1.414Z"
+                        fill="currentColor" />
+                    <path d="M10 3a7 7 0 1 0 0 14 7 7 0 0 0 0-14Zm-9 7a9 9 0 1 1 18 0 9 9 0 0 1-18 0Z"
+                        fill="currentColor" />
+                </svg>
+            </button>
             <div class="w-full h-[256px] p-2 outline outline-1 outline-gray-600 rounded-3xl">
                 <div class="relative rounded-2xl overflow-hidden flex items-center justify-center w-full h-full">
                     <video class="absolute object-cover w-full h-full" autoplay="" loop="" muted="" playsinline=""
-                        src={{@custom.homepage_video_source}} alt="Headline teaser" loading="lazy" preload="auto"></video>
+                        src={{@custom.homepage_video_source}} alt="Headline teaser" loading="lazy"
+                        preload="auto"></video>
                     <div class="bg-black opacity-80 inset-0 absolute"></div>
                     <img class="max-h-10 absolute" src="{{@site.logo}}" alt="{{@site.title}}" />
                 </div>
             </div>
         </div>
-
-        <div class="gh-postfeed grid grid-cols-feed gap-8 pb-[8vmin]">
-            {{#foreach posts}}
-                {{> "card" page=../pagination.page }} {{!-- partials/card.hbs --}}
-            {{/foreach}}
-        </div>
-        {{!-- If JS isn't enabled, fallback to standard pagination --}}
+        <div class="flex flex-col gap-16">
+            <div class="flex flex-col gap-4">
+                <h3>Recent</h3>
+                <div class="grid grid-cols-feed gap-12">
+                    {{#get "posts" limit='6'}}
+                    {{#foreach posts}}
+                        {{> "card" }} {{!-- partials/card.hbs --}}
+                    {{/foreach}}
+                    {{/get}}
+                </div>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h3>Archive</h3>
+                <div class="gh-postfeed grid grid-cols-feed gap-12">
+                    {{#foreach posts}}
+                        <div class="{{post_class}}">
+                        {{> "card" page=../pagination.page }} {{!-- partials/card.hbs --}}
+                        </div>
+                    {{/foreach}}
+                </div>        {{!-- If JS isn't enabled, fallback to standard pagination --}}
         <noscript>
             <div class="gh-pagination flex justify-between m-[4vmin]">
                 {{pagination}}
             </div>
         </noscript>
+            </div>
+        </div>
     </div>
 </div>

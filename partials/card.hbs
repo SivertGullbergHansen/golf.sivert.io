@@ -2,8 +2,8 @@
 Re-usable card for linking to posts
 --}}
 
-<article class="gh-card {{post_class}}">
-    <a class="gh-card-link flex flex-col" href="{{url}}">
+<article class="gh-card opacity-95 hover:opacity-100 transition hover:scale-[101%] active:scale-[99%] hover:-translate-y-1">
+    <a class="gh-card-link flex flex-col gap-4" href="{{url}}">
         {{#if feature_image}}
             <picture class="gh-card-picture">
               <source
@@ -42,15 +42,15 @@ Re-usable card for linking to posts
                 {{^if @first}}sizes="(min-width: 1200px) 1200px, 100vw)"{{else}}sizes="(min-width: 800px) 100vw, 700px"{{/if}}
                 src="{{img_url feature_image size="m"}}"
                 alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                class="gh-card-image w-full object-cover aspect-square first-of-type:aspect-video rounded-2xl"
+                class="gh-card-image w-full object-cover aspect-square first-of-type:aspect-video rounded-2xl outline outline-2 outline-transparent duration-200 outline-offset-4"
                 {{^if @first}}loading="lazy"{{/if}}
               >
             </picture>
         {{/if}}
-        <div class="gh-card-content max-w-[720px] mx-auto flex flex-col">
-            <h2 class="gh-card-title text-lg leading-[2.8] font-semibold">{{title}}</h2>
+        <div class="gh-card-content max-w-[720px] mx-auto flex flex-col gap-2">
+            <h2 class="gh-card-title text-lg font-semibold">{{title}}</h2>
             <p class="text-md leading-normal line-clamp-2">{{excerpt}}</p>
-            <span class="gh-card-meta block mb-3 text-xs tracking-wide opacity-80"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM"}}</time></span>
+            <span class="gh-card-meta block text-xs tracking-wide opacity-80"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM"}}</time></span>
         </div>
 
     </a>
