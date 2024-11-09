@@ -85,5 +85,8 @@
             }
         }
     },
-    "type": "module"
+    "type": "module",
+    "dependencies": {
+        "@tailwindcss/line-clamp": "^0.4.4"
+    }
 }

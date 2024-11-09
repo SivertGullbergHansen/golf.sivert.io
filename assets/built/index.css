@@ -1122,6 +1122,20 @@ figcaption strong {
   margin-top: 8vmin;
 }
 
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
 .block {
   display: block;
 }
@@ -1294,12 +1308,12 @@ figcaption strong {
   gap: 2.4rem;
 }
 
-.gap-\[8vmin\] {
-  gap: 8vmin;
+.gap-8 {
+  gap: 3.2rem;
 }
 
-.gap-1 {
-  gap: 0.4rem;
+.gap-\[8vmin\] {
+  gap: 8vmin;
 }
 
 .gap-x-\[4vmin\] {
@@ -1592,6 +1606,20 @@ figcaption strong {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 /* Customize website's scrollbar like Mac OS
