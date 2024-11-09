@@ -120,6 +120,7 @@ figcaption strong {
 
 .kg-image-card img {
     @apply m-auto;
+    @apply rounded-2xl;
 }
 
 /* Default to 16 / 9 aspect ratio for YouTube & Vimeo embeds – TW styles can't be directly applied */
