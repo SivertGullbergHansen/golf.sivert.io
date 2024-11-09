@@ -1,6 +1,10 @@
-# Ghost Starter Theme with Tailwind CSS
+# 35 Edition
 
-A starter framework for Ghost themes using Tailwind CSS! Click **Use this template** to create a copy of this repo for everything you need to get started developing a custom Ghost theme.
+The WIP theme for my brand **35 Edition**.
+
+## Preview
+
+![Screenshot](.github/preview.png)
 
 &nbsp;
 
