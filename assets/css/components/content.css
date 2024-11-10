@@ -93,6 +93,10 @@
 /* Cards
 /* ---------------------------------------------------------- */
 
+.kg-video-card video {
+    @apply rounded-2xl;
+}
+
 figcaption {
     @apply pt-4 px-4 pb-0 text-center text-sm leading-normal;
 }
