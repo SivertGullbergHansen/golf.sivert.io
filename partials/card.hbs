@@ -42,7 +42,8 @@ Re-usable card for linking to posts
                 {{^if @first}}sizes="(min-width: 1200px) 1200px, 100vw)"{{else}}sizes="(min-width: 800px) 100vw, 700px"{{/if}}
                 src="{{img_url feature_image size="m"}}"
                 alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                class="gh-card-image w-full object-cover aspect-square first-of-type:aspect-video rounded-2xl outline outline-2 outline-transparent duration-200 outline-offset-4"
+                class="gh-card-image w-full object-cover rounded-2xl outline outline-2 outline-transparent duration-200 outline-offset-4"
+                style="aspect-ratio: 1/1;"
                 {{^if @first}}loading="lazy"{{/if}}
               >
             </picture>
