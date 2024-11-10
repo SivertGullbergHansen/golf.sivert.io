@@ -93,6 +93,15 @@
 /* Cards
 /* ---------------------------------------------------------- */
 
+.kg-image-card img {
+    @apply w-full h-[620px] hover:h-[826px];
+
+    @apply transition-all;
+    @apply duration-300;
+
+    @apply object-cover object-center;
+}
+
 .kg-video-card video {
     @apply rounded-2xl;
 }
