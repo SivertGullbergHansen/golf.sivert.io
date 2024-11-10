@@ -93,11 +93,6 @@
 /* Cards
 /* ---------------------------------------------------------- */
 
-.gh-content :not(.kg-card):not([id]) + .kg-card,
-.gh-content .kg-card + :not(.kg-card) {
-    @apply mt-[6vmin];
-}
-
 figcaption {
     @apply pt-4 px-4 pb-0 text-center text-sm leading-normal;
 }
