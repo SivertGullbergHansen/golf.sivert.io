@@ -68,6 +68,18 @@
                 "default": "/content/media/YEAR/MONTH/FILE.mp4",
                 "group": "homepage",
                 "description": "Create a draft, upload your video, insert the current year, month and the original file name. Example: /content/media/2024/11/trailer.mp4"
+            },
+            "background_color": {
+                "type": "color",
+                "default": "#0b0b0f",
+                "group": "colors",
+                "description": "Background color for the website"
+            },
+            "text_color": {
+                "type": "color",
+                "default": "#ffffff",
+                "group": "colors",
+                "description": "Text color for the website"
             }
         },
         "card_assets": true,
