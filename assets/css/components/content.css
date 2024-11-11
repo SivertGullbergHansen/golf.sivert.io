@@ -100,7 +100,7 @@
     @apply object-cover object-center;
 }
 
-.hide-first-three:nth-child(-n + 3) {
+.hide-first-three > :nth-child(-n + 3) {
     @apply hidden;
 }
 
