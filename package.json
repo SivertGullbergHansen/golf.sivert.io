@@ -39,7 +39,9 @@
         "url": "https://github.com/TryGhost/Starter.git"
     },
     "bugs": "https://github.com/TryGhost/Starter/issues",
-    "contributors": "https://github.com/TryGhost/Starter/graphs/contributors",
+    "contributors": [
+        "Sivert Gullberg Hansen <@sivert.io>"
+    ],
     "devDependencies": {
         "@babel/core": "^7.21.0",
         "@babel/preset-env": "^7.20.2",

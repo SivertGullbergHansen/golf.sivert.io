@@ -19,7 +19,6 @@
     @apply w-full;
 }
 
-
 /* Typography
 /* ---------------------------------------------------------- */
 
@@ -89,7 +88,6 @@
     }
 }
 
-
 /* Cards
 /* ---------------------------------------------------------- */
 
@@ -100,6 +98,10 @@
     @apply duration-300;
 
     @apply object-cover object-center;
+}
+
+.hide-first-three:nth-child(-n + 3) {
+    @apply hidden;
 }
 
 .kg-video-card video {
@@ -132,12 +134,11 @@ figcaption strong {
 }
 
 /* Default to 16 / 9 aspect ratio for YouTube & Vimeo embeds – TW styles can't be directly applied */
-.kg-embed-card > :where(iframe[src*="youtube.com"],iframe[src*="vimeo.com"]) {
+.kg-embed-card > :where(iframe[src*="youtube.com"], iframe[src*="vimeo.com"]) {
     width: 100%;
     height: auto;
     aspect-ratio: 16/9;
 }
-
 
 /* Card captions
 /* ---------------------------------------------------------- */
@@ -156,7 +157,6 @@ figcaption strong {
 .kg-width-full.kg-card-hascaption figcaption {
     @apply col-[main-start/main-end];
 }
-
 
 /* Tables
 /* ---------------------------------------------------------- */
@@ -189,13 +189,11 @@ figcaption strong {
     @apply border-b border-[rgba(0,0,0,0.1)];
 }
 
-
 /* Read more
 /* ---------------------------------------------------------- */
 .gh-readmore svg {
     @apply inline-block align-middle h-[1em] mt-[0.15em];
 }
-
 
 .gh-card-link:hover img {
     @apply outline-gray-600;

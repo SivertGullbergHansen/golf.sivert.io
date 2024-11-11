@@ -37,7 +37,7 @@
             </div>
             {{#if @custom.show_archive}} <div class="flex flex-col gap-4">
                 <h3>{{@custom.archive_text}}</h3>
-                <div class="gh-postfeed grid grid-cols-feed gap-12">
+                <div class="gh-postfeed grid grid-cols-feed gap-12 hide-first-three">
                     {{#foreach posts}}
                         <div class="{{post_class}}">
                         {{> "card" page=../pagination.page }} {{!-- partials/card.hbs --}}
