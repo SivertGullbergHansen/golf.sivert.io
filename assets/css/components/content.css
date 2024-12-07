@@ -105,7 +105,7 @@
 }
 
 .kg-video-card video,
-kg-gallery-image img {
+.kg-gallery-image img {
     @apply rounded-2xl;
 }
 
