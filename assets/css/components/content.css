@@ -104,7 +104,8 @@
     @apply hidden;
 }
 
-.kg-video-card video {
+.kg-video-card video,
+kg-gallery-image img {
     @apply rounded-2xl;
 }
 
