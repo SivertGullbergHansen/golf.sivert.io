@@ -4,7 +4,7 @@
 /* Default fallback */
 
 p a {
-    @apply text-[#dc0050] underline underline-offset-1;
+    @apply text-[#dc0050] underline underline-offset-1 font-bold;
 }
 .gh-canvas > * {
     @apply col-[main-start/main-end];
