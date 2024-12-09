@@ -2,6 +2,10 @@
 /* ---------------------------------------------------------- */
 
 /* Default fallback */
+
+p a {
+    @apply text-[#dc0050] underline underline-offset-1;
+}
 .gh-canvas > * {
     @apply col-[main-start/main-end];
 }
@@ -92,10 +96,10 @@
 /* ---------------------------------------------------------- */
 
 .kg-image-card img {
-    @apply w-full max-h-[620px] hover:max-h-[1100px];
+    /* @apply w-full max-h-[620px] hover:max-h-[1100px]; */
 
-    @apply transition-all;
-    @apply duration-300;
+    /* @apply transition-all;
+    @apply duration-300; */
 
     @apply object-cover object-center;
 }
