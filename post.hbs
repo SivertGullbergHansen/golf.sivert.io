@@ -2,6 +2,9 @@
 {{#post}}
     <article class="gh-article {{post_class}} py-[8vmin]">
         <header class="gh-header gh-canvas grid grid-cols-canvas pb-[8vmin] text-center">
+            <a class="mx-auto mb-6" href='/'>
+                <img class="max-h-10" src="{{@site.logo}}" alt="{{@site.title}}" />
+            </a>
             <span class="gh-post-meta mb-3 text-xs leading-tight tracking-wide uppercase opacity-80"><time
                     datetime="{{date format=" YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span
                     class="bull">&bull;</span> {{reading_time}}</span>
