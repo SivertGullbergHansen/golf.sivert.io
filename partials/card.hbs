@@ -51,7 +51,11 @@ Re-usable card for linking to posts
         <div class="gh-card-content max-w-[720px] mx-auto flex flex-col gap-2">
             <h2 class="gh-card-title text-lg font-semibold">{{title}}</h2>
             <p class="text-md leading-normal line-clamp-3 text-gray-500">{{excerpt}}</p>
-            <span class="gh-card-meta block text-xs tracking-wide opacity-80"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM"}}</time></span>
+            <div class="flex items-center gap-2">
+            <span class="gh-card-meta block text-xs tracking-wide opacity-80" id="{{url}}">0 views</span>
+            •
+            <span class="gh-card-meta block text-xs tracking-wide opacity-80"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM - YYYY"}}</time></span>
+            </div>
         </div>
 
     </a>
