@@ -1,32 +1,38 @@
-// Fetch page views from Plausible API
-export async function fetchPageViews(url, siteId) {
+export async function fetchTotalVisitors(pagePath) {
     try {
-        const response = await fetch("https://plausible.sivert.io/api/v2/query", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                site_id: siteId,
-                metrics: ["pageviews"],
-                date_range: "all",
-                filters: [
-                    ["is", "event:page", [url]],
-                ],
-            }),
+        // Base URL for fetching stats
+        const baseUrl = "https://plausible.sivert.io/api/stats/golf.sivert.io/top-stats/";
+        const date = new Date().toISOString().split("T")[0]; // Current date in YYYY-MM-DD
+
+        // Construct the query string dynamically
+        const params = new URLSearchParams({
+            period: "all",
+            date: date,
+            filters: JSON.stringify([
+                ["is", "event:page", [pagePath]],
+            ]),
+            with_imported: "true",
+            comparison: "previous_period",
+            compare_from: "undefined",
+            compare_to: "undefined",
+            match_day_of_week: "true",
         });
+
+        // Fetch the data
+        const response = await fetch(`${baseUrl}?${params.toString()}`);
 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
         const data = await response.json();
-        // Access pageviews from the result
-        const pageviews = data.results[0]?.metrics[0] || 0; // Ensure we get the pageviews count
-        console.log(`Fetched ${pageviews} views for ${url}`);
-        return pageviews; // This will return the page view count (e.g., 1)
+
+        // Extract the unique visitors from the response
+        const uniqueVisitors = data.top_stats.find(stat => stat.name === "Total visits")?.value || 0;
+        console.log(`Total unique visitors for ${pagePath}:`, uniqueVisitors);
+        return uniqueVisitors; // Return the total unique visitors
     } catch (error) {
-        console.error(`Failed to fetch page views for ${url}:`, error);
+        console.error(`Failed to fetch total visitors for ${pagePath}:`, error);
         return "Error";
     }
 }
