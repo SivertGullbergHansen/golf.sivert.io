@@ -1,7 +1,6 @@
 import { fetchPageViews } from "./fetchPageViews";
 
 export default function infiniteScroll() {
-    const apiToken = "slJQ_QO9KtsjYsEhAZ0Hk5hzB5oUk4ikrJ-ZAn3n4gVcUB3GrSk0Mw1_w9h3YecT"; // Replace with your Plausible API token
     const siteId = "golf.sivert.io"; // Replace with your Plausible site ID
     let link = document.querySelector('link[rel="next"]')?.getAttribute('href');
 
@@ -16,7 +15,7 @@ export default function infiniteScroll() {
         const viewsElement = document.getElementById(postUrl);
 
         if (postUrl && viewsElement) {
-            fetchPageViews(postUrl, apiToken, siteId).then((views) => {
+            fetchPageViews(postUrl, siteId).then((views) => {
                 viewsElement.textContent = `${views} views`;
             });
         }
@@ -41,7 +40,7 @@ export default function infiniteScroll() {
                             const viewsElement = post.querySelector(".gh-card-meta[id]");
 
                             if (postUrl && viewsElement) {
-                                fetchPageViews(postUrl, apiToken, siteId).then((views) => {
+                                fetchPageViews(postUrl, siteId).then((views) => {
                                     viewsElement.textContent = `${views} views`;
                                 });
                             }

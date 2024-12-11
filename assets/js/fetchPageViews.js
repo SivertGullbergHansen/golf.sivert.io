@@ -1,10 +1,9 @@
 // Fetch page views from Plausible API
-export async function fetchPageViews(url, apiToken, siteId) {
+export async function fetchPageViews(url, siteId) {
     try {
         const response = await fetch("https://plausible.sivert.io/api/v2/query", {
             method: "POST",
             headers: {
-                "Authorization": `Bearer ${apiToken}`,
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
